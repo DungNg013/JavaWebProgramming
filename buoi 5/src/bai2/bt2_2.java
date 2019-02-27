@@ -16,6 +16,7 @@ public class bt2_2 {
         
      int[] phantu = new int [5];
      Scanner sc = new Scanner(System.in);
+     
           for(int i=0; i<phantu.length; i++){
          phantu[i] = sc.nextInt();
           }
@@ -28,7 +29,8 @@ public class bt2_2 {
              min = phantu[i];
          if(phantu[i] % 3 ==0)
                   System.out.println(" sochiahetcho3 = " +phantu[i]);
-
+        
+             
      }
      System.out.println(" max = " +max);
      System.out.println(" min = " +min);
