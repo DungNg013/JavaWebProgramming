@@ -10,20 +10,20 @@ package newpackage;
  * @author Dell E5440
  */
 public class matrix {
-    private int col;
-     private int row;
-      private int [][] value;
+//    private int col;
+//     private int row;
+ //     private int [][] value;
  public  matrix(){
-     this.col =3;
-     this.row =3;
-     this.value = new int[3][3];
+//     this.col =3;
+ //    this.row =3;
+ //    this.value = new int[3][3];
      
      
  }   
  public matrix(int col, int row, int[][] value){
-     this.col = col;
-     this.row=row;
-     this.value=value;
+  //   this.col = col;
+ //    this.row=row;
+  //   this.value=value;
  }
- public int get
+// public int get
 }
