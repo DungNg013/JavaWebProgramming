@@ -9,6 +9,11 @@ package b1;
  *
  * @author Dell E5440
  */
+
+
 public class b11 {
+    public static void main(String[] args) {
+        NhanVien nv = new NhanVien(null, age, null, luong, tongGioLm);
+    }
     
 }
