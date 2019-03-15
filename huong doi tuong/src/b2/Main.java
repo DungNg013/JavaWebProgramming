@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package huong.doi.tuong;
+package b2;
 
 /**
  *
  * @author Dell E5440
  */
-public class HuongDoiTuong {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class Main {
+     
+     public static void main(String[] args) {
+         
+         Student st = new Student(12345678, 8.0, 19, null);
+         st.printInfo();
+         st.tinhBong();
+         
+     }
     
 }

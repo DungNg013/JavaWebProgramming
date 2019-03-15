@@ -13,11 +13,11 @@ import java.util.Scanner;
  */
 
 public class NhanVien {
-    String name;
-    int age;
-    String diaChi;
-    double luong;
-    int tongGioLm;
+    private String name;
+    private int age;
+    private String diaChi;
+    private double luong;
+    private int tongGioLm;
  
     public NhanVien() {
     }
@@ -75,9 +75,9 @@ public class NhanVien {
         
          Scanner sc = new Scanner(System.in);
          
-         String name = new String();
+         name = sc.nextLine();
          age = sc.nextInt();
-         String diaChi = new String();
+         diaChi = sc.nextLine();
          luong = sc.nextDouble();
          tongGioLm = sc.nextInt();
     }
@@ -93,17 +93,32 @@ public class NhanVien {
         
     }
     
-    double tinhThuong(){
-        double thuong=0;
-        if(tongGioLm >=200)
-            thuong = luong*20/100;
-        else if(tongGioLm>=100 && tongGioLm<200)
-            thuong = luong*10/100;
-        else
-            thuong = 0;
+//     public void print(){
+//           System.out.println(this.tinhThuong(tongGioLm) );
+//       }
+//    
+      
+    
+    public double thuong(){
+        double tinhThuong = this.tinhThuong(tongGioLm);
+        tongGioLm = (int) (this.getTongGioLm()/ tinhThuong);
+        return tinhThuong(tongGioLm);
+        
     }
     
+   
+     float tinhThuong(int a){
+       float thuong = 0;
+        if(a >=200)
+            thuong = (float) (luong*20.0/100);
+        else if(a >=100 && a <200)
+            thuong = (float) (luong*10.0/100);
+        else 
+            thuong = 0;
+        System.out.println(" thuong la: "+ thuong);
+        return thuong;
+        
+    }
 }
 //
 
-//}

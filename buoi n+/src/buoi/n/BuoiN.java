@@ -3,24 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package b1;
+package buoi.n;
 
 /**
  *
  * @author Dell E5440
  */
+public class BuoiN {
 
-
-public class b11 {
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        NhanVien nv = new NhanVien(null, 46, null,457, 150);
-        nv.printInfo();
-        //NhanVien thuong = nv.thuong();
-        nv.thuong();
-        //thuong.print();
-        
-        
-    
+        // TODO code application logic here
+        MyDate da = new MyDate(12,3,2004);
+        da.printInfo();
     }
     
 }
