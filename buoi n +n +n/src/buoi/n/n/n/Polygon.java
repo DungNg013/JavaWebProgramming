@@ -3,25 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package b14;
+package buoi.n.n.n;
 
 /**
  *
  * @author Dell E5440
  */
-public class Triangle {
-    
+public class Polygon {
     private int a;
-    private int b;
-    private int c;
+     private int b;
+      private int c;
+       private int d;
 
-    public Triangle() {
+    public Polygon() {
     }
 
-    public Triangle(int a, int b, int c) {
+    public Polygon(int a, int b, int c, int d) {
         this.a = a;
         this.b = b;
         this.c = c;
+        this.d = d;
     }
 
     public int getA() {
@@ -47,6 +48,15 @@ public class Triangle {
     public void setC(int c) {
         this.c = c;
     }
-    
+
+    public int getD() {
+        return d;
+    }
+
+    public void setD(int d) {
+        this.d = d;
+    }
+       
+       
     
 }
