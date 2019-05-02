@@ -5,6 +5,8 @@
  */
 package Main;
 import java.io.File;
+import java.nio.file.attribute.FileTime;
+import java.text.SimpleDateFormat;
 //import java.util.Date;
     
 /**
@@ -21,10 +23,21 @@ public class Main {
        
         File f = new File("D:\\picture");
 //       if (f.isDirectory()) {
-           File[] children = f.listFiles();
-            for (File file : children) {
-            System.out.println(file.getAbsolutePath());
+        
+           File[] ch = f.listFiles();
+            for (File file : ch) {
+                if(file.isFile())
+                    System.out.print(file.getAbsolutePath());   
+                        int sizeOfFile = (int) Math.round(file.length()/1000);
+                         System.out.println(" /Size: " + sizeOfFile + "kb");
        }
+            System.out.println("----------------------");
+           File[] che = f.listFiles();
+            for (File file : che) {
+                if(!file.isFile())
+                    System.out.println(file.getAbsolutePath());
+            }  
+              
              System.out.println("----------------------");
             File[] txtFiles = f.listFiles(new TxtFileFilter());
  
