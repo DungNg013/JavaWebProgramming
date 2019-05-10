@@ -31,8 +31,8 @@ public class demo {
         System.out.println(" 4. Save");
         System.out.println(" 5. Exit");
         int choi;
-        Scanner sc = new Scanner(System.in);
-        choi = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+        choi = input.nextInt();
         switch(choi){
             case 1:
                     System.out.print("File Path  ");
