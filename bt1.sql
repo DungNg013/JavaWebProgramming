@@ -44,11 +44,14 @@ delete from SACH
 where masach = 5;
 
 insert into DOCGIA(sothe, ten, khoa, khoahoc, thoihanthe)
-value(1, 'lung thi lo', 'mama', 'nani', 12-12);
+value(1, 'lung thi lo', 'mama', 'nani', "2009-12-12");
 insert into DOCGIA(sothe, ten, khoa, khoahoc, thoihanthe)
-value(2, 'lung thi la', 'mama', 'nani', 1-12);
+value(2, 'lung thi la', 'aama', 'nani', "2009-1-12");
 insert into DOCGIA(sothe, ten, khoa, khoahoc, thoihanthe)
-value(5, 'lung thi lp', 'mama', 'nani', 16-12);
+value(5, 'lung thi lp', 'nama', 'nani', "2015-1-12");
+
+select ten, khoa from docgia
+order by khoa desc;
 
 
 
