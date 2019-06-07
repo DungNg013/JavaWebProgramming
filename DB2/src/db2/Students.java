@@ -64,7 +64,7 @@ public class Students {
 
     @Override
     public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+         return "Student{" + "id=" + id + ", name=" + name + ", email=" + email + ", pass=" + pass + '}'; //To change body of generated methods, choose Tools | Templates.
     }
     
 }

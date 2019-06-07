@@ -99,18 +99,7 @@ public class Question {
          bui.append("D. "+ this.answerD);
         return bui.toString(); //To change body of generated methods, choose Tools | Templates.
     }
-
-    void getContent(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void getAnswerA(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void getCorrect(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-            
 }
+
+   
+  

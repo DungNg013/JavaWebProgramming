@@ -28,12 +28,13 @@ public class QuestionManager {
         List<Question>list = new ArrayList<>();
         while(rs.next()){
             Question q = new Question();
-            q.getContent(rs.getString("content"));
-            q.getAnswerA(rs.getString("answer_A"));
-            q.getAnswerA(rs.getString("answer_B"));
-            q.getAnswerA(rs.getString("answer_C"));
-            q.getAnswerA(rs.getString("answer_D"));
-            q.getCorrect(rs.getString("correct"));
+            q.setId(rs.getInt("id"));
+            q.setContent(rs.getString("content"));
+            q.setAnswerA(rs.getString("answer_a"));
+            q.setAnswerB(rs.getString("answer_b"));
+            q.setAnswerC(rs.getString("answer_c"));
+            q.setAnswerD(rs.getString("answer_d"));
+            q.setCorrect(rs.getString("correct"));
             list.add(q);
     }
         return list;

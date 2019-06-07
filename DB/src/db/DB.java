@@ -21,6 +21,15 @@ public class DB {
      */
     public static void main(String[] args) {
         
+        try {
+            // TODO code application logic here
+            Class.forName("com.mysql.jdbc.Driver");
+            String connStr = "jdbc:mysql://localhost:3306/qli";
+            Connection conn = DriverManager.getConnection(connStr, "root", "123123");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
         
 //        
         

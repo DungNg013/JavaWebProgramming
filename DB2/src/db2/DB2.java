@@ -32,31 +32,25 @@ public class DB2 {
             String pass = input.nextLine();
             
             StudentManager sm = new StudentManager();
-            boolean check = sm.login(email, pass);
-            
-            if(check){
-                System.out.println("login succes");
+            Students s = sm.login(email, pass);
+
+            if (s != null) {
+                System.out.println("LOGIN SUCCESS! PRESS ANY KEY TO START QUIZ");
                 input.nextLine();
-                QuestionManager qm = new QuestionManager();
-                List<Question> questions = qm.getQuestion();
-                int count = 0;
-                int index = 1;
-                for(Question q : questions){
-                    System.out.printf("Question %d/%d \n", index++, questions.size());
-                    System.out.println(q);
-                    System.out.println("your answer ");
-                    String answer = input.nextLine();
-                    if(answer.toLowerCase().equals(q.getContent().toLowerCase())){
-                        count++;
+                boolean completed = sm.isCompleted(s);
+                if (completed) {
+                    System.out.println("YOU HAVE COMPLETED THE TEST.");
+                    System.out.print("DO YOU WANT TO DO IT AGAIN (Y/N): ");
+                    String cont = input.nextLine();
+                    if (cont.toLowerCase().equals("y")) {
+                        sm.resetQuiz(s);
+                        startQuiz(input, sm, s);    
                     }
-                    System.out.println("congratulation");
-                    System.out.printf("your result: %d/%d", count, questions.size());
-                        
-                            
+                } else {
+                    startQuiz(input, sm, s);
                 }
-            }
-            else{
-                System.out.println("login fail");
+            } else {
+                System.out.println("LOGIN FAIL!");
             }
         
         } catch (Exception ex) {
@@ -64,6 +58,33 @@ public class DB2 {
         }
            
            
+    }
+
+    
+    public static void startQuiz(Scanner input, StudentManager sm, Students s) throws ClassNotFoundException, SQLException {
+        System.out.println("---------------");
+        QuestionManager qm = new QuestionManager();
+        List<Question> questions = qm.getQuestion();
+        int countCorr = 0;
+        int index = 1;
+        for (Question q : questions) {
+            System.out.printf("Question %d/%d \n", index++, questions.size());
+            System.out.println(q);
+            System.out.print("Your answer > ");
+            String answer = input.nextLine();
+            sm.addAnswer(s, q, answer);
+            if (answer.toLowerCase().equals(q.getCorrect().toLowerCase())) {
+                countCorr++;
+            }
+        }
+        System.out.println("Congratulation!");
+        System.out.printf("Your result: %d/%d \n", countCorr, questions.size());
+        System.out.print("See Detail (Y/N) > ");
+
+        String cont = input.nextLine();
+        if (cont.toLowerCase().equals("y")) {
+            sm.printResult(s);
+        }
     }
     
 }
