@@ -10,6 +10,9 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            #con{
+              width: 300px;  
+            }
             #first{
                 background-color: darkslategrey;
                 color: azure;
@@ -20,28 +23,49 @@ and open the template in the editor.
                 width: 72px;
                 height: 30px;
             }
+            .btm{
+                width: 72px;
+                height: 120px;
+                background-color:aqua;
+            }
+            .btr{
+                width: 72px;
+                height: 30px;
+                background-color: red; 
+            }
         </style>
     </head>
     <body>
-    
-        <input id="first"/>
-        <br>
-        <input type="button" value="+" class="btn" onclick="calc('+')"/>
-        <input type="button" value="-" class="btn" onclick="calc('-')"/>
-        <input type="button" value="*" class="btn" onclick="calc('*')"/>
-        <input type="button" value="/" class="btn" onclick="calc('/')"/>
-        <br>
-        <div >
-            <input type="button" value="7" class="btn" />
-            <input type="button" value="8" class="btn" />
-            <input type="button" value="9" class="btn" />  
+        <div id="con">
+            <input id="first"/>
             <br>
+            <input type="button" value="+" class="btn" onclick="first.value+=this.value"/>
+            <input type="button" value="-" class="btn" onclick="first.value+=this.value"/>
+            <input type="button" value="*" class="btn" onclick="first.value+=this.value"/>
+            <input type="button" value="/" class="btn" onclick="first.value+=this.value"/>
+            <br>
+            <div style="float: left">
+                <input type="button" value="7" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="8" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="9" class="btn" onclick="first.value+=this.value"/> 
+                <br>
+                <input type="button" value="4" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="5" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="6" class="btn" onclick="first.value+=this.value"/> 
+                <br>
+                <input type="button" value="1" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="2" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="3" class="btn" onclick="first.value+=this.value"/>  
+                <br>
+                <input type="button" value="0" class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="." class="btn" onclick="first.value+=this.value"/>
+                <input type="button" value="AC" class="btr" onclick="first.value=''"/>  
+            
+            </div>
+            
+            <div style="float: right">
+                <input type="button" value="=" class="btm" onclick="first.value = eval(first.value)"/>
+            </div>
         </div>
-        
-        <div >
-            <input type="button" value="=" class="btn" />
-        </div>
-    
-        
     </body>
 </html>
