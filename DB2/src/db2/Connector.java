@@ -25,7 +25,7 @@ public class Connector {
         
             // TODO code application logic here
             Class.forName("com.mysql.jdbc.Driver");
-            String connStr = "jdb:mysql://localhost:3306//quiz";
+            String connStr = "jdbc:mysql://localhost:3306/qli";
             Connection conn = DriverManager.getConnection(connStr,"root","123123");
             return conn;
     }
