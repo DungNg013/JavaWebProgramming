@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class Connector {
     public Connection getConnect() throws ClassNotFoundException, SQLException{
         Class.forName("com.mysql.jdbc.Driver");
-        String connStr = "jdb:mysql://localhost:3306/qli";
+        String connStr = "jdb:mysql://localhost:3306/user";
         String user ="root";
         String pass ="123123";
       

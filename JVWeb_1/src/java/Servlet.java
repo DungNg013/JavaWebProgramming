@@ -34,6 +34,14 @@ public class Servlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            UserMode userModel = new UserMode();
+            User user = new User();
+            user.getUsername(request.getParameter("username"));
+            user.getPassword(request.getParameter("password"));  
+            user.getEmail(request.getParameter("email"));  
+            user.getFullName(request.getParameter("fullname"));  
+            user.getAddress(request.getParameter("address"));  
+            userModel.insert(user);
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -60,7 +68,10 @@ public class Servlet extends HttpServlet {
             out.println("</table>");
             out.println("</center></body>");
             out.println("</html>");
+        }catch(Exception e){
+            e.printStackTrace();
         }
+                
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
