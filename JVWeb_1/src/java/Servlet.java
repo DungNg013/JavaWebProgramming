@@ -36,12 +36,12 @@ public class Servlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             UserMode userModel = new UserMode();
             User user = new User();
-            user.getUsername(request.getParameter("username"));
-            user.getPassword(request.getParameter("password"));  
-            user.getEmail(request.getParameter("email"));  
-            user.getFullName(request.getParameter("fullname"));  
-            user.getAddress(request.getParameter("address"));  
-            userModel.insert(user);
+//            user.getUsername(request.getParameter("username"));
+//            user.getPassword(request.getParameter("password"));  
+//            user.getEmail(request.getParameter("email"));  
+//            user.getFullName(request.getParameter("fullname"));  
+//            user.getAddress(request.getParameter("address"));  
+//            userModel.insert(user);
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");

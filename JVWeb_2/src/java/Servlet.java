@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Dell E5440
  */
-@WebServlet(urlPatterns = {"/Servlet"})
+@WebServlet(urlPatterns = {"/Them moi"})
 public class Servlet extends HttpServlet {
 
     /**
@@ -39,7 +39,8 @@ public class Servlet extends HttpServlet {
             out.println("<title>Servlet Servlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
+           
+             out.println("</table>");
             out.println("</body>");
             out.println("</html>");
         }
